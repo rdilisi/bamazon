@@ -34,6 +34,8 @@ connection.query("select * from products",function(error,result){
                     var total = result[i].price * answers.q2
                     //update the database with the new stock quantities
                     //google how to do an update query with sql
+                    UPDATE bamazon_db
+                    SET stock_quantity = value WHERE item_id = value
                     connection.query('query',function(error,result){
                         //tell the customer they made a successful purchase and how much they were charged
 
